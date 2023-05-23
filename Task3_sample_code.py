@@ -17,7 +17,7 @@ def match_test(list_object, file_name):
     for q in questions:
         if list_object[0] in q["prompts"]:
             # If the second object in list_object matches the "answer"
-            if list_object[1] == questions[answer]:
+            if list_object[1] == q["answer"]:
                 return 1
 
     # If no matches were found, return 0

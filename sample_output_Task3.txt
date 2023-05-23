@@ -1,8 +1,0 @@
-
-
-list = ["sample(temperature=0.8)
-"""
-Q: Nilus fluvi~ est.
-A: [answer]
-    """
-from "openai/text-davinci-003"", "us"]

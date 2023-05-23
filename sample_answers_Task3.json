@@ -1,14 +1,5 @@
 {
     "questions": [
-        {  
-            "question":"Nilus fluvi~ est.", 
-            "prompts": [
-                "Q: Nilus fluvi~ est. A:",
-                "The question: Nilus fluvi~ est. Answer:",
-                "Please fill in the tilde: Nilus fluvi~ est."
-              ],
-            "answer:": "wrong"
-        },
         {
             "question":"Nilus fluvi~ est.", 
             "prompts": [
@@ -25,25 +16,7 @@
                 "The question: Sicilia ~ est. Answer:",
                 "Please fill in the missing word: Nilus fluvi~ est."
               ],
-            "answer:": "wrong"
-        },
-        {
-            "question":"Sicilia ~ est.", 
-            "prompts": [
-                "Q: Sicilia ~ est. A:",
-                "The question: Sicilia ~ est. Answer:",
-                "Please fill in the missing word: Nilus fluvi~ est."
-              ],
             "answer": "insula"
-        },
-        { 
-            "question":"Ubi est Roma?", 
-            "prompts": [
-                "Q:Ubi est Roma? A:",
-                "The question: Ubi est Roma?Answer:",
-                "Please write a sentence in response: Ubi est Roma?"
-              ],
-            "answer:": "wrong"
         },
         {
             "question":"Ubi est Roma?", 
