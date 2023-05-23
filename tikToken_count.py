@@ -23,8 +23,15 @@ with open(output_file, 'w', newline='') as f:
     
     for file in files:
         file_path = os.path.join(directory, file)
-        with open(file_path, 'r', encoding='latin1') as txt_file:
-            text = txt_file.read()
-            tokens = num_tokens_from_string(text, "cl100k_base")
-            language = file.rstrip('.txt')
-            writer.writerow([file, tokens])
+        try:
+            with open(file_path, 'r', encoding='utf-8') as txt_file:
+                text = txt_file.read()
+                tokens = num_tokens_from_string(text, "cl100k_base")
+                language = file[:-4]
+                writer.writerow([language, tokens])
+        except UnicodeDecodeError:
+            with open(file_path, 'r', encoding='latin1') as txt_file:
+                text = txt_file.read()
+                tokens = num_tokens_from_string(text, "cl100k_base")
+                language = file[:-4]
+                writer.writerow([language, tokens])
