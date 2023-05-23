@@ -2,7 +2,6 @@ import csv
 import os
 import tiktoken
 
-# Specify the "summer" directory
 directory = './Summer_ML_Research'
 
 # Output file
@@ -24,7 +23,7 @@ with open(output_file, 'w', newline='') as f:
     
     for file in files:
         file_path = os.path.join(directory, file)
-        with open(file_path, 'r') as txt_file:
+        with open(file_path, 'r', encoding='latin1') as txt_file:
             text = txt_file.read()
             tokens = num_tokens_from_string(text, "cl100k_base")
             language = file.rstrip('.txt')
