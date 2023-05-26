@@ -7,33 +7,27 @@ import os
 async def query(prompt):
     output = (await lmql.run(prompt, output_writer=lmql.stream("RESPONSE")))
     return output
-def match_test(prompt, answer, file_name):
-    questions = data["stuff"]
-
-    for q in questions:
-      for prompt_in_Json in q["prompt"]:
-        if prompt_in_Json in prompt:
-            if answer == q["answer"]:
-                return 1
-    # If no matches were found, return 0
+def match_test(code, answer, file_name):
+    codes = data["code"]
+    for c in codes:
+        if answer == c["answer"]:
+            return 1
     return 0
 
-
-if __name__ == "__main__":
-    json_name = '/home/jzhao5793/proj/modulus-magnus-linguae/sample_answers_Task3.json'
-    with open(json_name, 'r') as f:
+def main(filename):
+    with open(filename, 'r') as f:
         data = json.load(f)
-    stuffs=data["stuff"]
+
+    codes=data["code"]
     a = 0
     b = 0
-    for q in stuffs:
-        for codes in q["code"]:
-            response = asyncio.run(query(codes))
-            prompt_from_Output = response[0].prompt
-            answer_from_Output = response[0].variables['ANSWER']
-            a += match_test(prompt_from_Output, answer_from_Output, json_name)
-            b += 1
-            print(prompt_from_Output, answer_from_Output)
-    accu_rate = [a/b, b]
-    print(accu_rate)
-print(match_test(prompt_from_Output, answer_from_Output, json_name))
+    for c in codes:
+        response = asyncio.run(query(c))
+        answer_from_Output = response[0].variables['ANSWER']
+        a += match_test(c, answer_from_Output, data)
+        b += 1
+    accu_rate = a/b
+    return accu_rate
+
+if __name__ == "__main__":
+    main(sys.argv[1])
