@@ -2,13 +2,13 @@ import lmql
 import asyncio
 import json
 import os
-
+import sys
 
 async def query(prompt):
     output = (await lmql.run(prompt, output_writer=lmql.stream("RESPONSE")))
     return output
 def match_test(code, answer, file_name):
-    codes = data["code"]
+    codes = data["codes"]
     for c in codes:
         if answer == c["answer"]:
             return 1
@@ -18,7 +18,7 @@ def main(filename):
     with open(filename, 'r') as f:
         data = json.load(f)
 
-    codes=data["code"]
+    codes=data["codes"]
     a = 0
     b = 0
     for c in codes:
@@ -30,4 +30,4 @@ def main(filename):
     return accu_rate
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[0])
