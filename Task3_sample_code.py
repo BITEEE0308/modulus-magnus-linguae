@@ -5,31 +5,29 @@ import os
 import sys
 
 async def query(prompt):
+    '''takes in lmql prompt, returns model output'''
     output = (await lmql.run(prompt, output_writer=lmql.stream("RESPONSE")))
     return output
 
-def match_test(code, answer, file_name):
-    codes = data["codes"]
-    for c in codes:
-        if code == c["code"]:
-            if answer == c["answer"]:
-                return 1
-    return 0
-
-def main(filename):
+async def main():
+    # opening json file
+    with open(sys.argv[1], 'r') as f:
+        data = json.load(f)
     codes=data["codes"]
+
+    # getting total accuracy rate of questions from a quiz
     a = 0
     b = 0
     for c in codes:
-            response = asyncio.run(query(c["code"]))
+            response = await query(c["code"])
             answer_from_Output = response[0].variables['ANSWER']
-            a += match_test(c, answer_from_Output, data)
+            if answer_from_Output == ("\n\n" + c["answer"]):
+                a +=1
             b += 1
     accu_rate = a/b
-    return accu_rate
+
+    # output 
+    print(accu_rate)
 
 if __name__ == "__main__":
-    print(len(sys.argv))
-    with open(sys.argv[1], 'r') as f:
-        data = json.load(f)
-    main(data)
+    asyncio.run(main())
