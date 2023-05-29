@@ -2,7 +2,7 @@
     "codes": [
         {
             "code":"argmax\"answer this latin Nilus fluvi~ est. [ANSWER] \" from \"openai/text-ada-001\"", 
-            "answer": "us"
+            "answer": "Nilus fluvi is a type of flu that is caused by the Nilus virus."
         },
         {
             "code":"argmax\"answer this latin Nilus et Rhenus fluvi~ ~. [ANSWER] \" from \"openai/text-ada-001\"", 
@@ -10,7 +10,7 @@
         },
         {
             "code":"argmax\"answer this latin Creta insul~ ~. [ANSWER] \" from \"openai/text-ada-001\"",
-            "answer": "a est"
+            "answer": "Insula is a word for a small island."
         },
         {
             "code":"argmax\"answer this latin Creta et Rhodus insula~ sunt. [ANSWER] \" from \"openai/text-ada-001\"", 

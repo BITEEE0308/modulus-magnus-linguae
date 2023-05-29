@@ -2,27 +2,27 @@
     "codes": [
         {
             "code":"argmax\"answer this latin Nilus fluvi~ est. [ANSWER] \" from \"openai/text-davinci-003\"", 
-            "answer": "us"
+            "answer": "Nilus est fluvius."
         },
         {
             "code":"argmax\"answer this latin Nilus et Rhenus fluvi~ ~. [ANSWER] \" from \"openai/text-davinci-003\"", 
-            "answer": "i sunt"
+            "answer": "Nilus et Rhenus fluvii sunt inter se coniuncti."
         },
         {
             "code":"argmax\"answer this latin Creta insul~ ~. [ANSWER] \" from \"openai/text-davinci-003\"",
-            "answer": "a est"
+            "answer": "Creta insula est."
         },
         {
             "code":"argmax\"answer this latin Creta et Rhodus insula~ sunt. [ANSWER] \" from \"openai/text-davinci-003\"", 
-            "answer": "e"
+            "answer": "Creta et Rhodus insulae sunt."
         },
         {
             "code":"argmax\"answer this latin Rhenus et Danuvius non fluvi~ parv~, sed fluvi~ magn~ sunt. [ANSWER] \" from \"openai/text-davinci-003\"",
-            "answer": "i i i i"
+            "answer": "Rhenus et Danuvius non sunt parvi flumina, sed magna."
         },
         {
             "code":"argmax\"answer this latin Brundisium non oppid~ parv~, sed oppid~ magn~ est. [ANSWER] \" from \"openai/text-davinci-003\"",
-            "answer": "um um um um"
+            "answer": "Brundisium non est parvum oppidum, sed magna oppidum est."
         }
     ]
 }

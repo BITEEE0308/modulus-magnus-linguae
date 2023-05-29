@@ -2,15 +2,15 @@
     "codes": [
         {
             "code":"argmax\"answer this latin Britannia non ~ parva, sed ~ ~ est. [ANSWER] \" from \"openai/text-ada-001\"", 
-            "answer": "insula insula magna"
+            "answer": "This is a difficult question with many possible answers."
         },
         {
             "code":"argmax\"answer this latin Brundisium non ~ ~, sed ~ magnum est. [ANSWER] \" from \"openai/text-ada-001\"", 
-            "answer": "oppidum parvum oppidum"
+            "answer": "This is a Latin phrase meaning \"the large is the best.\""
         },
         {
             "code":"argmax\"answer this latin Est~ Brundisium in Graecia? [ANSWER] \" from \"openai/text-ada-001\"",
-            "answer": "ne"
+            "answer": "No, it is not a latin word."
         },
         {
             "code":"argmax\"answer this latin Brundisium ~ est in Gracia, ~ in Italia. [ANSWER] \" from \"openai/text-ada-001\"", 

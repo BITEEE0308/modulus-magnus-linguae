@@ -1,0 +1,5 @@
+model, quizCh, promptStyle, accuracy
+text-ada-001, capitvlvm_1, style1, 0.33
+text-davinci-003, capitvlvm_1, style1, 1.0
+text-ada-001, capitvlvm_1, style2, 0.0
+text-ada-001, capitvlvm_2, style1, 0.17
