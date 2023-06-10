@@ -4,7 +4,6 @@ from pathlib import Path
 import argparse
 import glob
 import os
-import shutil
 
 def main():
     parser = argparse.ArgumentParser()
@@ -13,10 +12,6 @@ def main():
 
     folder_name = args.folder_path
     print(folder_name)
-
-    if os.path.exists(f'training_testing_{folder_name}'):
-        shutil.rmtree(f'training_testing_{folder_name}')
-    os.makedirs(f'training_testing_{folder_name}')
 
     folder_path = Path(args.folder_path)
     processed_files = set()
@@ -39,8 +34,8 @@ def main():
                     for entry in data['codes']
                 ]
             
-            json_name = ".".join([info_list[0], info_list[1], info_list[3]])
-            with open(f"training_testing_{folder_name}/{json_name}.jsonl", "w") as outfile:
+            # change the file path to a fixed path
+            with open(f"all_quiz_data.jsonl", "a") as outfile:
                 for entry in transformed_data:
                     json.dump(entry, outfile)
                     outfile.write('\n')
