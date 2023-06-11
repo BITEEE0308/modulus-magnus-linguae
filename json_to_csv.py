@@ -35,7 +35,7 @@ for filename in os.listdir(directory):
             except ValueError:
                 print(f"Could not convert {rate} to float. Skipping...")
                 continue
-        model, chapter, style, question_type, quiz_type = filename.split(".")[0:5]
+        chapter, question_type, style, model, quiz_type = filename.split(".")[0:5]
         data.append([model, chapter, style, quiz_type, question_type, accuracy])
 
 
@@ -43,7 +43,7 @@ for filename in os.listdir(directory):
 # text-ada-001.CAPITVLVM_I.style9.mc.PENSVM-A.json
 df = pd.DataFrame(data, columns=["model", "chapter", "style", "quiz_type", "question_type", "accuracy"])
 df['chapter'] = df['chapter'].str.split('_').str[1].map(roman_to_decimal)
-
+print(df)
 # pivoting to make specific tables
 
 # model chapter table
