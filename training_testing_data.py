@@ -11,9 +11,15 @@ def main():
     args = parser.parse_args()
 
     folder_name = args.folder_path
-    print(folder_name)
 
     folder_path = Path(args.folder_path)
+
+    testing_folder_path = folder_path.parent / (folder_name + "_Testing")
+
+    if testing_folder_path.exists():
+        shutil.rmtree(testing_folder_path)
+    os.makedirs(testing_folder_path)
+
     processed_files = set()
 
     # iterate over all json files in the given directory
@@ -26,19 +32,36 @@ def main():
             processed_files.add(fingerprint)
             with file_path.open(mode='r', encoding="utf-8") as f:
                 data = json.load(f)
-                transformed_data = [
+                transformed_training_data = [
                     {
                         'prompt': re.search(r"'(.*?)' from", entry['code']).group(1).removesuffix(' [ANSWER]'),
                         'completion': entry['answer']
                     }
-                    for entry in data['codes']
+                    for entry in data['codes'][:5]
+                ]
+
+                transformed_testing_data = [
+                    {
+                        'prompt': re.search(r"'(.*?)' from", entry['code']).group(1).removesuffix(' [ANSWER]'),
+                        'completion': entry['answer']
+                    }
+                    for entry in data['codes'][5:]  # get all items starting from the 6th
                 ]
             
-            # change the file path to a fixed path
-            with open(f"all_quiz_data.jsonl", "a") as outfile:
-                for entry in transformed_data:
+            with open(f"quiz_training_data.jsonl", "a") as outfile:
+                for entry in transformed_training_data:
                     json.dump(entry, outfile)
                     outfile.write('\n')
+
+            with open(f"quiz_testing_data.jsonl", "a") as outfile:
+                for entry in transformed_testing_data:
+                    json.dump(entry, outfile)
+                    outfile.write('\n')
+
+            testing_file_path = testing_folder_path / file_path.name
+            with open(testing_file_path, "w") as outfile:
+                json.dump({"codes": data['codes'][5:]}, outfile)
+
 
 if __name__ == "__main__":
     main()
