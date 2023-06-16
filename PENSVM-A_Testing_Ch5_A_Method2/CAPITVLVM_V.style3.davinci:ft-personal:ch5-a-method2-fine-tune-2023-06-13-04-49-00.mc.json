@@ -1,0 +1,44 @@
+{
+    "codes": [
+        {
+            "code": "argmax 'Fill in the ~ to match the context of the sentence. This quiz is in Latin. Provide the answer only. Aemilia: \"Mārce et Quīnte! Voc~ Iūliam!\" Choose from this set of possible answers [ ā ant īs īs, ōs ōs ās ās, ō ō ō ā, ās ās ō et ā it, am et ent, āte, am ant ī ōs at īte, it am iunt, iunt ō īs īs, ē ās ēte, īs, ā ā it, ent, ēte ite ās ite, ās unt unt ō am unt ō ās ā unt] [ANSWER]' from 'openai/davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00' where ANSWER in [ 'ā ant īs īs', 'ōs ōs ās ās', 'ō ō ō ā', 'ās ās ō et ā it', 'am et ent', 'āte', 'am ant ī ōs at īte', 'it am iunt', 'iunt ō īs īs', 'ē ās ēte', 'īs', 'ā ā it', 'ent', 'ēte ite ās ite', 'ās unt unt ō am unt ō ās ā unt']",
+            "answer": "āte"
+        },
+        {
+            "code": "argmax 'Fill in the ~ to match the context of the sentence. This quiz is in Latin. Provide the answer only. Puerī Iūli~ voc~ : \"Iūlia! Ven~!\" et Iūlia puer~ voc~ : \"Mārce et Quīnte! Ven~ \" Choose from this set of possible answers [ ā ant īs īs, ōs ōs ās ās, ō ō ō ā, ās ās ō et ā it, am et ent, āte, am ant ī ōs at īte, it am iunt, iunt ō īs īs, ē ās ēte, īs, ā ā it, ent, ēte ite ās ite, ās unt unt ō am unt ō ās ā unt] [ANSWER]' from 'openai/davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00' where ANSWER in [ 'ā ant īs īs', 'ōs ōs ās ās', 'ō ō ō ā', 'ās ās ō et ā it', 'am et ent', 'āte', 'am ant ī ōs at īte', 'it am iunt', 'iunt ō īs īs', 'ē ās ēte', 'īs', 'ā ā it', 'ent', 'ēte ite ās ite', 'ās unt unt ō am unt ō ās ā unt']",
+            "answer": "am ant ī ōs at īte"
+        },
+        {
+            "code": "argmax 'Fill in the ~ to match the context of the sentence. This quiz is in Latin. Provide the answer only. Iūlia puerōs nōn aud~, sed puerī Iūli~ aud~. Choose from this set of possible answers [ ā ant īs īs, ōs ōs ās ās, ō ō ō ā, ās ās ō et ā it, am et ent, āte, am ant ī ōs at īte, it am iunt, iunt ō īs īs, ē ās ēte, īs, ā ā it, ent, ēte ite ās ite, ās unt unt ō am unt ō ās ā unt] [ANSWER]' from 'openai/davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00' where ANSWER in [ 'ā ant īs īs', 'ōs ōs ās ās', 'ō ō ō ā', 'ās ās ō et ā it', 'am et ent', 'āte', 'am ant ī ōs at īte', 'it am iunt', 'iunt ō īs īs', 'ē ās ēte', 'īs', 'ā ā it', 'ent', 'ēte ite ās ite', 'ās unt unt ō am unt ō ās ā unt']",
+            "answer": "it am iunt"
+        },
+        {
+            "code": "argmax 'Fill in the ~ to match the context of the sentence. This quiz is in Latin. Provide the answer only. Iūlia: \"Cūr puerī nōn ven~?\" Iūlia ex hort~ venit cum V ros~ pulchr~. Choose from this set of possible answers [ ā ant īs īs, ōs ōs ās ās, ō ō ō ā, ās ās ō et ā it, am et ent, āte, am ant ī ōs at īte, it am iunt, iunt ō īs īs, ē ās ēte, īs, ā ā it, ent, ēte ite ās ite, ās unt unt ō am unt ō ās ā unt] [ANSWER]' from 'openai/davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00' where ANSWER in [ 'ā ant īs īs', 'ōs ōs ās ās', 'ō ō ō ā', 'ās ās ō et ā it', 'am et ent', 'āte', 'am ant ī ōs at īte', 'it am iunt', 'iunt ō īs īs', 'ē ās ēte', 'īs', 'ā ā it', 'ent', 'ēte ite ās ite', 'ās unt unt ō am unt ō ās ā unt']",
+            "answer": "iunt ō īs īs"
+        },
+        {
+            "code": "argmax 'Fill in the ~ to match the context of the sentence. This quiz is in Latin. Provide the answer only. Iūlia: \"Vid~ ros~ meās, māter! Vid~, puerī!\" Choose from this set of possible answers [ ā ant īs īs, ōs ōs ās ās, ō ō ō ā, ās ās ō et ā it, am et ent, āte, am ant ī ōs at īte, it am iunt, iunt ō īs īs, ē ās ēte, īs, ā ā it, ent, ēte ite ās ite, ās unt unt ō am unt ō ās ā unt] [ANSWER]' from 'openai/davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00' where ANSWER in [ 'ā ant īs īs', 'ōs ōs ās ās', 'ō ō ō ā', 'ās ās ō et ā it', 'am et ent', 'āte', 'am ant ī ōs at īte', 'it am iunt', 'iunt ō īs īs', 'ē ās ēte', 'īs', 'ā ā it', 'ent', 'ēte ite ās ite', 'ās unt unt ō am unt ō ās ā unt']",
+            "answer": "ē ās ēte"
+        },
+        {
+            "code": "argmax 'Fill in the ~ to match the context of the sentence. This quiz is in Latin. Provide the answer only. Mārcus: \"Rosae pulchrae sunt, puella sine ros~ pulchra nōn est!\" Choose from this set of possible answers [ ā ant īs īs, ōs ōs ās ās, ō ō ō ā, ās ās ō et ā it, am et ent, āte, am ant ī ōs at īte, it am iunt, iunt ō īs īs, ē ās ēte, īs, ā ā it, ent, ēte ite ās ite, ās unt unt ō am unt ō ās ā unt] [ANSWER]' from 'openai/davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00' where ANSWER in [ 'ā ant īs īs', 'ōs ōs ās ās', 'ō ō ō ā', 'ās ās ō et ā it', 'am et ent', 'āte', 'am ant ī ōs at īte', 'it am iunt', 'iunt ō īs īs', 'ē ās ēte', 'īs', 'ā ā it', 'ent', 'ēte ite ās ite', 'ās unt unt ō am unt ō ās ā unt']",
+            "answer": "īs"
+        },
+        {
+            "code": "argmax 'Fill in the ~ to match the context of the sentence. This quiz is in Latin. Provide the answer only. Iūlia cum ūn~ ros~ discēd~. Choose from this set of possible answers [ ā ant īs īs, ōs ōs ās ās, ō ō ō ā, ās ās ō et ā it, am et ent, āte, am ant ī ōs at īte, it am iunt, iunt ō īs īs, ē ās ēte, īs, ā ā it, ent, ēte ite ās ite, ās unt unt ō am unt ō ās ā unt] [ANSWER]' from 'openai/davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00' where ANSWER in [ 'ā ant īs īs', 'ōs ōs ās ās', 'ō ō ō ā', 'ās ās ō et ā it', 'am et ent', 'āte', 'am ant ī ōs at īte', 'it am iunt', 'iunt ō īs īs', 'ē ās ēte', 'īs', 'ā ā it', 'ent', 'ēte ite ās ite', 'ās unt unt ō am unt ō ās ā unt']",
+            "answer": "ā ā it"
+        },
+        {
+            "code": "argmax 'Fill in the ~ to match the context of the sentence. This quiz is in Latin. Provide the answer only. Puerī rīd~. Choose from this set of possible answers [ ā ant īs īs, ōs ōs ās ās, ō ō ō ā, ās ās ō et ā it, am et ent, āte, am ant ī ōs at īte, it am iunt, iunt ō īs īs, ē ās ēte, īs, ā ā it, ent, ēte ite ās ite, ās unt unt ō am unt ō ās ā unt] [ANSWER]' from 'openai/davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00' where ANSWER in [ 'ā ant īs īs', 'ōs ōs ās ās', 'ō ō ō ā', 'ās ās ō et ā it', 'am et ent', 'āte', 'am ant ī ōs at īte', 'it am iunt', 'iunt ō īs īs', 'ē ās ēte', 'īs', 'ā ā it', 'ent', 'ēte ite ās ite', 'ās unt unt ō am unt ō ās ā unt']",
+            "answer": "ent"
+        },
+        {
+            "code": "argmax 'Fill in the ~ to match the context of the sentence. This quiz is in Latin. Provide the answer only. Aemilia: \"Tac~, puerī! Sūm~ ros~ et discēd~!\" Choose from this set of possible answers [ ā ant īs īs, ōs ōs ās ās, ō ō ō ā, ās ās ō et ā it, am et ent, āte, am ant ī ōs at īte, it am iunt, iunt ō īs īs, ē ās ēte, īs, ā ā it, ent, ēte ite ās ite, ās unt unt ō am unt ō ās ā unt] [ANSWER]' from 'openai/davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00' where ANSWER in [ 'ā ant īs īs', 'ōs ōs ās ās', 'ō ō ō ā', 'ās ās ō et ā it', 'am et ent', 'āte', 'am ant ī ōs at īte', 'it am iunt', 'iunt ō īs īs', 'ē ās ēte', 'īs', 'ā ā it', 'ent', 'ēte ite ās ite', 'ās unt unt ō am unt ō ās ā unt']",
+            "answer": "ēte ite ās ite"
+        },
+        {
+            "code": "argmax 'Fill in the ~ to match the context of the sentence. This quiz is in Latin. Provide the answer only. Puerī ros~ sūm~ et discēd~ ; in ātri~ aqu~ sūm~ ex impluvi~ et ros~ in aqu~ pōn~. Choose from this set of possible answers [ ā ant īs īs, ōs ōs ās ās, ō ō ō ā, ās ās ō et ā it, am et ent, āte, am ant ī ōs at īte, it am iunt, iunt ō īs īs, ē ās ēte, īs, ā ā it, ent, ēte ite ās ite, ās unt unt ō am unt ō ās ā unt] [ANSWER]' from 'openai/davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00' where ANSWER in [ 'ā ant īs īs', 'ōs ōs ās ās', 'ō ō ō ā', 'ās ās ō et ā it', 'am et ent', 'āte', 'am ant ī ōs at īte', 'it am iunt', 'iunt ō īs īs', 'ē ās ēte', 'īs', 'ā ā it', 'ent', 'ēte ite ās ite', 'ās unt unt ō am unt ō ās ā unt']",
+            "answer": "ās unt unt ō am unt ō ās ā unt"
+        }
+    ]
+}
