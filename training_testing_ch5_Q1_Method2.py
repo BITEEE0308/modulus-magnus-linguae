@@ -22,7 +22,7 @@ def main():
     os.makedirs(testing_folder_path)
 
     processed_files = set()
-    testing_file = open(f"quiz_training_Ch5_A_Method2.jsonl", "w")
+    training_file = open(f"quiz_training_Ch5_A_Method2.jsonl", "w")
 
     # List of Roman numerals from I to V
     roman_numerals = ["I", "II", "III", "IV", "V"]
@@ -49,17 +49,17 @@ def main():
                     ]
 
                 for entry in transformed_training_data:
-                    json.dump(entry, testing_file)
-                    testing_file.write('\n')
+                    json.dump(entry, training_file)
+                    training_file.write('\n')
 
                 testing_file_path = testing_folder_path / file_path.name
-                with open(testing_file_path, "w") as outfile:
-                    json.dump({"codes": data['codes'][5:]}, outfile)
 
-        else:
-            shutil.copy(file_path, testing_folder_path / file_path.name)
+                if "CAPITVLVM_V." in file_path.name:
+                    with open(testing_file_path, "w") as outfile:
+                        json.dump({"codes": data['codes'][5:]}, outfile)
 
-    testing_file.close()
+
+    training_file.close()
 
 if __name__ == "__main__":
     main()

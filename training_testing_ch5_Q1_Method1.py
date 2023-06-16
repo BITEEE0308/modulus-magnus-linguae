@@ -22,7 +22,7 @@ def main():
     os.makedirs(testing_folder_path)
 
     processed_files = set()
-    testing_file = open(f"quiz_training_Ch5_A_Method1.jsonl", "w")
+    training_file = open(f"quiz_training_Ch5_A_Method1.jsonl", "w")
 
     for file_path in glob.glob(f"{folder_path}/*.json"):
         file_path = Path(file_path)
@@ -46,17 +46,13 @@ def main():
                     ]
 
                 for entry in transformed_training_data:
-                    json.dump(entry, testing_file)
-                    testing_file.write('\n')            
+                    json.dump(entry, training_file)
+                    training_file.write('\n')            
 
 
                 testing_file_path = testing_folder_path / file_path.name
                 with open(testing_file_path, "a") as outfile:
                     json.dump({"codes": data['codes'][5:]}, outfile)
-
-        else:
-            shutil.copy(file_path, testing_folder_path / file_path.name)
-    testing_file.close()
 
 if __name__ == "__main__":
     main()
