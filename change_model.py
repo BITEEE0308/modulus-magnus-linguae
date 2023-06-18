@@ -18,11 +18,15 @@ def main():
             data = json.load(f)
 
         for entry in data.get('codes', []):
-            code = entry.get('code', '')
-            entry['code'] = re.sub(rf'from\s\'(.+?)\'\swhere', f'from \'openai/{replace_model}\' where', code)
-        new_file_path = str(file_path).replace('text-ada-001', replace_model)
+            idx = entry['code'].find("] [ANSWER]'")
+
+            if idx != -1:
+                new_code = entry['code'][:idx+1] + " Answer:" + entry['code'][idx+1:]
+
+                entry['code'] = new_code.replace('text-ada-001', replace_model)
+        new_file_path = str(file_path).replace('text-ada-001', replace_model)        
         with open(new_file_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
+            json.dump(data, f, ensure_ascii=True)
         
         if file_path != new_file_path:
             Path(file_path).unlink()

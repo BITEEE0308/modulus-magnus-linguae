@@ -13,9 +13,13 @@ async def query(c):
     print("sending output")
     output = (await lmql.run(c["code"], output_writer=lmql.stream("RESPONSE")))
     if output[0].variables['ANSWER'].strip() == c["answer"]:
+        print(output[0].variables['ANSWER'].strip())
+        print(c["answer"])
         print("output returned, answer is : 1")
         return 1
     print("output returned, answer is : 0")
+    print(output[0].variables['ANSWER'].strip())
+    print(c["answer"])
     return 0
 
 async def run(codes):
@@ -41,7 +45,6 @@ def calc_accuracy(codes):
     '''
     # using query to prompt model with questions in parallel 
     loop = asyncio.get_event_loop()
-    print(codes)    
     results = loop.run_until_complete(run(codes))
     return round(sum(results)/len(results), 2)
     print(round(sum(results)/len(results), 2))
@@ -62,7 +65,9 @@ def main():
         model = "davinci-finetuned-ch5_method1"
     elif info_list[2] == "davinci:ft-personal:ch5-a-method2-fine-tune-2023-06-13-04-49-00":
         model = "davinci-finetuned-ch5_method2"
-    json_name = ".".join([info_list[0].split("/")[1], info_list[1], model, info_list[0].split("/")[0], info_list[3]])
+    else:
+        model = "davinci-finetuned-ch5_method3"
+    json_name = ".".join([info_list[0].split("/")[1], info_list[1], model, info_list[0].split("/")[0].split("_")[0], info_list[3]])
 
     print(json_name)
     output_file = "results-ch5_A/" + json_name + ".json"
